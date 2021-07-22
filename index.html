@@ -5,5 +5,71 @@
     </style>
 </head>
 <body>
-
+    <nav class="transparent">
+        <a href="/" class="brand"><span>Systemd File Online Generator</span></a>
+        <div class="menu">
+            <a target="_blank" href="https://github.com/systemd-config/systemd" class="button">GitHub</a>
+        </div>
+    </nav>
+    <main>
+        <section class="flex five" style="width:90%;max-width:960px;padding:80px 0 0;margin:0 auto;">
+            <div class="full">
+                <div style="text-align: center;" class="tabs three">
+                    <input id="tabC-1" type="radio" name="tabgroupC" checked="" aria-hidden="true">
+                    <label for="tabC-1" class="pseudo button toggle">Unit</label>
+                    <span> /</span>
+                    <input id="tabC-2" type="radio" name="tabgroupC" aria-hidden="true">
+                    <label for="tabC-2" class="pseudo button toggle">Install</label>
+                    <span> /</span>
+                    <input id="tabC-3" type="radio" name="tabgroupC" aria-hidden="true">
+                    <label for="tabC-3" class="pseudo button toggle">Service</label>
+                    <div class="row">
+                        <div class="card">
+                            <header>
+                                <h3>Units are the objects that systemd knows how to manage.</h3>
+                            </header>
+                            <section><input type="text" placeholder="Description" aria-label="Description"></section>
+                            <section><input type="text" placeholder="Documentation" aria-label="Documentation"></section>
+                            <section><input type="text" placeholder="Requires" aria-label="Requires"></section>
+                            <section><input type="text" placeholder="Wants" aria-label="Wants"></section>
+                            <section><input type="text" placeholder="BindsTo" aria-label="BindsTo"></section>
+                            <section><input type="text" placeholder="Before" aria-label="Before"></section>
+                            <section><input type="text" placeholder="After" aria-label="After"></section>
+                            <section><input type="text" placeholder="Conflicts" aria-label="Conflicts"></section>
+                            <section><input type="text" placeholder="Condition" aria-label="Condition"></section>
+                            <section><input type="text" placeholder="Assert" aria-label="Assert"></section>
+                            <footer><label for="tabC-2" class="button">Next</label></footer>
+                        </div>
+                        <div class="card">
+                            <header>
+                                <h3>On the opposite side of unit file, the last section is often the [Install] section.</h3>
+                            </header>
+                            <section><input type="text" placeholder="WantedBy" aria-label="WantedBy"></section>
+                            <section><input type="text" placeholder="RequiredBy" aria-label="RequiredBy"></section>
+                            <section><input type="text" placeholder="Alias" aria-label="Alias"></section>
+                            <section><input type="text" placeholder="Also" aria-label="Also"></section>
+                            <footer><label for="tabC-3" class="button">Next</label><label for="tabC-1" class="button dangerous">Back</label></footer>
+                        </div>
+                        <div class="card">
+                            <header>
+                                <h3>The [Service] section is used to provide configuration that is only applicable for services.</h3>
+                            </header>
+                            <section><input type="text" placeholder="Type" aria-label="Type"></section>
+                            <section><input type="text" placeholder="ExecStart" aria-label="ExecStart"></section>
+                            <section><input type="text" placeholder="ExecStartPre" aria-label="ExecStartPre"></section>
+                            <section><input type="text" placeholder="ExecStartPost" aria-label="ExecStartPost"></section>
+                            <section><input type="text" placeholder="ExecReload" aria-label="ExecReload"></section>
+                            <section><input type="text" placeholder="ExecStop" aria-label="ExecStop"></section>
+                            <section><input type="text" placeholder="ExecStopPost" aria-label="ExecStopPost"></section>
+                            <section><input type="text" placeholder="RestartSec" aria-label="RestartSec"></section>
+                            <section><input type="text" placeholder="Restart" aria-label="Restart"></section>
+                            <section><input type="text" placeholder="TimeoutSec" aria-label="TimeoutSec"></section>
+                            <section><input type="text" placeholder="Environment" aria-label="Environment"></section>
+                            <footer><button class="success">Finish!</button><label for="tabC-2" class="button dangerous">Back</label></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
