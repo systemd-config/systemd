@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: upload files to OSS
+        uses: systemd-config/aliyun-oss-website-action@master
+        with:
+            accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
+            accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
+            bucket: ${{ secrets.OSS_BUCKET }}
+            endpoint: ${{ secrets.OSS_ENDPOINT }}
+            folder: public
